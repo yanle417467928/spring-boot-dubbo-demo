@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: spring-boot-dubbo-demo-consumer
+  main:
+    allow-bean-definition-overriding: true # 不设置会与Spring Boot冲突
+server:
+  port: 9999
+dubbo:
+  registry:
+    address: zookeeper://127.0.0.1:2181 # Zookeeper注册中心地址
+  protocol:
+    port: -1 # 随机端口
+    name: dubbo # dubbo协议名字
+
+demo:
+  service:
+    version: 0.0.1 # 消费者版本与生产者版本一致
